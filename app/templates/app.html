@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LTI Testing</title>
+		<link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+	</head>
+	<body>
+		<div class="content">
+			<h1>Hi, {{ user_name }}</h1>
+			<ul>
+				<li>LTI version: {{ launch_data['https://purl.imsglobal.org/spec/lti/claim/version'] }}</li>
+				<li>LMS name: {{ launch_data['https://purl.imsglobal.org/spec/lti/claim/tool_platform']['name'] }}</li>
+				<li>User ID: {{ launch_data['https://purl.imsglobal.org/spec/lti/claim/lis']['person_sourcedid'] }}</li>
+				<li>User full name: {{ launch_data['name'] }}</li>
+				<li>User email: {{ launch_data['email'] }}</li>
+				<li>Course ID: {{ launch_data['https://purl.imsglobal.org/spec/lti/claim/lis']['course_section_sourcedid'] }}</li>
+				<li>Course roles: {{ launch_data['https://purl.imsglobal.org/spec/lti/claim/roles'] }}</li>
+			</ul>
+		</div>
+	</body>
+</html>

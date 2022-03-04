@@ -1,0 +1,9 @@
+.content {
+    font-family: Verdana, Tahoma, sans-serif;
+}
+.content h1 {
+    text-align: center;
+}
+.content ul {
+    list-style-type: square;
+}
